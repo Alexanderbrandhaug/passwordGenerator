@@ -5,9 +5,12 @@ html, body{
   padding: 0;
   font-family: 'Vollkorn', serif;
   font-size: 15px;
-  background: linear-gradient(to top left, #4A148C, #C51162);
-  background-repeat: cover;
-  color: white;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
+
+
+
 
 }
 
@@ -98,21 +101,26 @@ background: transparent;
 }
 
  button:hover {
-background-color:#F1B24A;      color: white; }
+background-color:#FFDC00;      color: white; }
 
 
 #specialSign{
-  top:0;
-  left:0;
-  width:14px;
-  height:14px;
-  background-color:  #F1B24A;
-  transition: .3s background-color;
-  cursor: pointer;
-  border-radius: 15px;
+  width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
 
 
 }
+#specialSign:checked{
+  background-color: #FFDC00;
+}
+
 select option{
-  background: #F1B24A;
+  background: rgba(0, 0, 0, 0.6);
 }
