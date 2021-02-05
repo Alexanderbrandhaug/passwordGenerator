@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title></title>
+<meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="style.css" href="style.css">
+
+</head>
+
+<body>
+
+    <form>
+    <label for="Password length">Choose password length:</label>
+    <select name="pwlength" id="pwlen">
+      <option value="pw6">6 (weak)</option>
+      <option value="pw12">12 (strong)</option>
+      <option value="pw16">16 (stronger)</option>
+    </select>
+    <br><br>
+  </form>
+
+  <form>
+    <input type ="checkbox" id="specialSign" name="sign">
+    <label for="sign">Include specialsign</label><br>
+    </form>
+
+<button onclick ="getElementById('demo').innerHTML = validate()">Generate Password</button>
+
+
+<script>
+function test(length){
+
+  var result = '';
+  var characters = "ABCDEFGHIJKLMNOPQRSTUVQXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersWithSigns = "ABCDEFGHIJKLMNOPQRSTUVQXYZabcdefghijklmnopqrstuvwxyz0123456789!?@&#%"
+  var charactersLength = characters.length;
+  if(length == 6){
+  for (var i = 0; i < length; i++)
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+  } if (length == 12){
+    for (var i = 0; i < length; i++)
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+  }  if (length == 16){
+      for (var i = 0; i < length; i++)
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+console.log(test(12));
+
+
+function validateCheckBox(){
+  var lengthPw = document.getElementById("pwlen");
+  var spcSign = document.getElementById("specialSign")
+  if(lengthPw.selectedIndex == 0 && spcSign.checked == true ){
+     return test2(6); }
+
+
+}
+
+
+
+
+
+function test2(length){
+
+  var result = '';
+  var characters ="ABCDEFGHIJKLMNOPQRSTUVQXYZabcdefghijklmnopqrstuvwxyz0123456789!?@&#%";
+  var charactersLength = characters.length;
+  if(length == 6){
+  for (var i = 0; i < length; i++)
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+  } if (length == 12){
+    for (var i = 0; i < length; i++)
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+  }  if (length == 16){
+      for (var i = 0; i < length; i++)
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+
+
+}
+
+
+
+
+
+
+function validate(){
+
+var lengthPw = document.getElementById("pwlen");
+var spcSign = document.getElementById("specialSign")
+
+  if(lengthPw.selectedIndex == 0 && spcSign.checked == false){
+   return test(6); }
+
+  if (lengthPw.selectedIndex == 1 && spcSign.checked == false){
+    return test(12);}
+
+  if (lengthPw.selectedIndex == 2 && spcSign.checked == false){
+    return test(16);}
+
+  if(lengthPw.selectedIndex == 0 && spcSign.checked == true){
+    return test2(6);}
+
+  if(lengthPw.selectedIndex == 1 && spcSign.checked == true){
+    return test2(12);}
+
+  if(lengthPw.selectedIndex == 2 && spcSign.checked == true){
+    return test2(16);}
+
+}
+
+
+
+</script>
+
+
+
+<p id="demo"> </p>
+
+
+
+<footer>
+
+</footer>
+
+</body>
+</html>
