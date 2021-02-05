@@ -1,0 +1,48 @@
+html, body{
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  font-family: 'Vollkorn', serif;
+}
+
+
+
+#form1{
+  position: absolute;
+  left: 10%;
+  top:25%;
+  border-style: none;
+}
+
+#form2{
+  position: absolute;
+  left:10%;
+  top: 40%;
+  border-style: none;
+
+}
+
+button{
+  position: absolute;
+  left:10%;
+  top:55%;
+  border-style: none;
+
+}
+
+
+p{
+  position: absolute;
+  left:55%;
+  top:45%;
+  border-style: none;
+}
+#pwGen{
+  border-style: none;
+  position: absolute;
+  top:45%;
+  left:40%;
+  width:400px;
+  height:200px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
