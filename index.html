@@ -5,13 +5,17 @@
 <title></title>
 <meta charset="utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="style.css" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <form>
+
+ <div id="pwGen">
+    <form id = "form1">
     <label for="Password length">Choose password length:</label>
     <select name="pwlength" id="pwlen">
       <option value="pw6">6 (weak)</option>
@@ -21,12 +25,15 @@
     <br><br>
   </form>
 
-  <form>
+  <form id="form2">
     <input type ="checkbox" id="specialSign" name="sign">
     <label for="sign">Include specialsign</label><br>
     </form>
 
 <button onclick ="getElementById('demo').innerHTML = validate()">Generate Password</button>
+<p id="demo"> </p>
+</div>
+
 
 
 <script>
@@ -124,7 +131,7 @@ var spcSign = document.getElementById("specialSign")
 
 
 
-<p id="demo"> </p>
+
 
 
 
