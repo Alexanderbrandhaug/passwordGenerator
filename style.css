@@ -53,7 +53,7 @@ button{
 
 p{
   position: absolute;
-  left:54%;
+  left:51%;
   top:45%;
   outline: none;
   color:white;
@@ -73,7 +73,7 @@ p{
   color:white;
   border-radius: 25px;
   padding:20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 
 
 
