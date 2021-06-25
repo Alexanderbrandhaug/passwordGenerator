@@ -20,7 +20,7 @@
     <select name="pwlength" id="pwlen">
       <option value="pw6">6 (weak)</option>
       <option value="pw12">12 (strong)</option>
-      <option value="pw16">16 (stronger)</option>
+      <option value="pw20">20 (stronger)</option>
     </select>
     <br><br>
   </form>
@@ -51,7 +51,7 @@ function test(length){
     for (var i = 0; i < length; i++)
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
 
-  }  if (length == 16){
+  }  if (length == 20){
       for (var i = 0; i < length; i++)
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
@@ -86,7 +86,7 @@ function test2(length){
     for (var i = 0; i < length; i++)
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
 
-  }  if (length == 16){
+  }  if (length == 20){
       for (var i = 0; i < length; i++)
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
@@ -121,7 +121,7 @@ var spcSign = document.getElementById("specialSign")
     return test2(12);}
 
   if(lengthPw.selectedIndex == 2 && spcSign.checked == true){
-    return test2(16);}
+    return test2(20);}
 
 }
 
